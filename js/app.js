@@ -28,7 +28,7 @@ const loadAndRender = (url, data) => {
 };
 
 const showMemberList = () => {
-	fetch(host + 'user').then(response => {
+	fetch('https://gist.githubusercontent.com/vayupranaditya/c93d331458794fc67dbb777151cfbc51/raw/c6d086c74e57acc57bfd26ab616f4bd8e880410b/aryakenceng-user-mockup.json').then(response => {
 		clearTabbarContent();
 		$('#tabbar-content').load('component/member-list.html');
 		loadAndRender('component/member-card.html', response.data);
