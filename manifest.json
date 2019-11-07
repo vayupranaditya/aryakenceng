@@ -1,0 +1,20 @@
+{
+    "name": "connect.aryakenceng.or.id",
+    "short_name": "Arya Kenceng Connect",
+    "description": "Arya Kenceng Connect is an application to know your family and also to gain many benefits from the organization.",
+    "start_url": "index.html",
+    "orientation": "portrait",
+    "lang": "Indonesian",
+    "display": "standalone",
+    "theme_color": "#ffa500",
+    "background_color": "#ffa500",
+    "icons": [{
+        "src": "img/logo.png",
+        "sizes": "192x192",
+        "type": "image/png"
+    }, {
+        "src": "img/ak_lg.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }]
+}
