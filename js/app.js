@@ -16,7 +16,7 @@ $('#tabbar-content').on('swipeleft', () => {
   } else if ($('#news-btn')[0].checked) {
     $('#news-btn')[0].checked = false;
     $('#promo-btn')[0].checked = true;
-    clearTabbarContent();
+    showPromoList();
   } else if ($('#promo-btn')[0].checked) {
     $('#promo-btn')[0].checked = false;
     $('#profile-btn')[0].checked = true;
@@ -35,13 +35,13 @@ $('#tabbar-content').on('swiperight', () => {
   } else if ($('#profile-btn')[0].checked) {
     $('#profile-btn')[0].checked = false;
     $('#promo-btn')[0].checked = true;
-    clearTabbarContent();
+    showPromoList();
   }
 });
 
 $('#member-btn').click(() => showMemberList());
 $('#news-btn').click(() => showNewsList());
-$('#promo-btn').click(() => clearTabbarContent());
+$('#promo-btn').click(() => showPromoList());
 $('#profile-btn').click(() => clearTabbarContent());
 
 const fetch = url => {
@@ -85,6 +85,15 @@ const showNewsList = () => {
       loadAndRender('component/news-card.html', 'news-list', response.data);
     });
   });
+};
+
+const showPromoList = () => {
+	clearTabbarContent();
+	$('#tabbar-content').load('component/promo-list.html', () => {
+		fetch(host + 'promo').then(response => {
+			loadAndRender('component/promo-card.html', 'promo-list', response.data);
+		})
+	});
 };
 
 const clearTabbarContent = () => $('#tabbar-content').empty();
