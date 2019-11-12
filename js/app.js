@@ -1,6 +1,4 @@
-'use strict'
-
-const host = 'http://10.30.40.50:1803/';
+const host = 'http://10.30.40.64:1803/';
 
 $('document').ready(() => {
   if ($('#member-btn').prop('checked', true)) {
@@ -20,7 +18,7 @@ $('#tabbar-content').on('swipeleft', () => {
   } else if ($('#promo-btn')[0].checked) {
     $('#promo-btn')[0].checked = false;
     $('#profile-btn')[0].checked = true;
-    clearTabbarContent();
+    showProfile();
   }
 });
 $('#tabbar-content').on('swiperight', () => {
@@ -42,7 +40,7 @@ $('#tabbar-content').on('swiperight', () => {
 $('#member-btn').click(() => showMemberList());
 $('#news-btn').click(() => showNewsList());
 $('#promo-btn').click(() => showPromoList());
-$('#profile-btn').click(() => clearTabbarContent());
+$('#profile-btn').click(() => showProfile());
 
 const fetch = url => {
   try {
@@ -94,6 +92,11 @@ const showPromoList = () => {
 			loadAndRender('component/promo-card.html', 'promo-list', response.data);
 		})
 	});
+};
+
+const showProfile = () => {
+	clearTabbarContent();
+	$('#tabbar-content').load('component/profile.html');
 };
 
 const clearTabbarContent = () => $('#tabbar-content').empty();
