@@ -1,0 +1,61 @@
+<div class="toolbar toolbar--material" style="background-color: #ffa500">
+	<div class="toolbar__left toolbar--material__left" onclick="backTo('member')">
+		<span class="toolbar-button toolbar-button--material" style="back">
+			<i class="zmdi zmdi-arrow-left has-text-black"></i>
+		</span>
+	</div>
+	<div class="toolbar__center toolbar--material__center">
+		Anggota
+	</div>
+</div>
+
+<div class="has-text-centered" style="background-color: #ffb200; width: 100vw; padding: 3vh 3vw">
+	<div  class="columns is-centered is-mobile" style=" min-height: 100px;">
+		<div class="column"></div>
+		<div class="is-centered column is-one-third" style="max-width: 150px; max-height: 150px;">
+			<div style="clear: both; position: relative;">
+				<figure class="image">
+					<img class="is-rounded" src="{{img_url}}">
+				</figure>
+				</button>
+			</div>
+		</div>
+		<div class="column"></div>
+	</div>
+	<div>
+		<span class="title is-6">{{name}}</span>
+	</div>
+	<div>
+		<span class="subtitle is-6">{{jro_puri.name}}</span>
+	</div>
+</div>
+<div style="padding: 2vh 5vw">
+	<div style="margin: 1vh 0">
+		<label style="color: grey">Tanggal lahir</label><br>
+		<span>{{birthdate}}</span>
+	</div>
+	<div style="margin: 1vh 0">
+		<label style="color: grey">Jenis kelamin</label><br>
+		<span>{{is_male}}</span>
+	</div>
+	<div style="margin: 1vh 0">
+		<label style="color: grey">Status</label><br>
+		<span>{{is_married}}</span>
+	</div>
+	<div style="margin: 1vh 0">
+		<label style="color: grey">Alamat tinggal</label><br>
+		<span>{{address}}</span>
+	</div>
+	<div style="margin: 1vh 0">
+		<label style="color: grey">Nomor telepon</label><br>
+		<span>{{phone}}</span>
+	</div>
+	<div style="margin: 1vh 0">
+		<label style="color: grey">Pekerjaan</label><br>
+		<span>{{job}}</span>
+	</div>
+	<div style="margin: 1vh 0">
+		<label style="color: grey">Bidang Usaha</label><br>
+		<span>{{field_of_business}}</span>
+	</div>
+</div>
